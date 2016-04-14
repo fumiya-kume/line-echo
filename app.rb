@@ -15,26 +15,27 @@ class App < Sinatra::Base
           :eventType => "138311608800106203", # Fixed value
           #オウム返しする場合
 
-          msg['content'].text = "Hello World"
-          :content => msg['content']
+          message = msg['content'].text
+      message.text = "Hello World"
+      :content => msg['content']
 
-          # :content => {
-          #     :location => null,
-          #     :id => "325708",
-          #     :contentType => 1,
-          #     :from => "uff2aec188e58752ee1fb0f9507c6529a",
-          #     :createdTime => 1332394961610,
-          #     :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
-          #     :toType => 1,
-          #     :contentMetadata => null,
-          #     :text => "Hello, BOT API Server!"
-          # }
+      # :content => {
+      #     :location => null,
+      #     :id => "325708",
+      #     :contentType => 1,
+      #     :from => "uff2aec188e58752ee1fb0f9507c6529a",
+      #     :createdTime => 1332394961610,
+      #     :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
+      #     :toType => 1,
+      #     :contentMetadata => null,
+      #     :text => "Hello, BOT API Server!"
+      # }
 
-          #content => {
-          #    :contentType => 1,
-          #    :toType => 1,
-          #    :text => [msg['content']['from']]
-          #}
+      #content => {
+      #    :contentType => 1,
+      #    :toType => 1,
+      #    :text => [msg['content']['from']]
+      #}
       }
 
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
