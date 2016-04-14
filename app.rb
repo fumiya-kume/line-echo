@@ -15,7 +15,7 @@ class App < Sinatra::Base
           :eventType => "138311608800106203", # Fixed value
           #オウム返しする場合
 
-          # msg['content'].text = "Hello World"
+          msg['content'].text = "Hello World"
           :content => msg['content']
 
           # :content => {
