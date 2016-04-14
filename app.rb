@@ -20,7 +20,7 @@ class App < Sinatra::Base
           content => {
               :contentType => 1,
               :toType => 1,
-              :text => msg['content'].to_json
+              :text => 'Hello World'
           }
 
           #content => {
