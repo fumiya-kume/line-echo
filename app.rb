@@ -18,23 +18,19 @@ class App < Sinatra::Base
 
           # :content => msg['content']
 
-          :content => {
-              :location => null,
-              :id => "325708",
-              :contentType => 1,
-              :from => "uff2aec188e58752ee1fb0f9507c6529a",
-              :createdTime => 1332394961610,
-              :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
-              :toType => 1,
-              :contentMetadata => null,
-              :text => "Hello, BOT API Server!"
-          }
+          # :content => {
+          #     :location => null,
+          #     :id => "325708",
+          #     :contentType => 1,
+          #     :from => "uff2aec188e58752ee1fb0f9507c6529a",
+          #     :createdTime => 1332394961610,
+          #     :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
+          #     :toType => 1,
+          #     :contentMetadata => null,
+          #     :text => "Hello, BOT API Server!"
+          # }
 
-          #content => {
-          #    :contentType => 1,
-          #    :toType => 1,
-          #    :text => [msg['content']['from']]
-          #}
+          content: {contentType: 1, toType: 1, text: "Hello"}
       }
 
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
