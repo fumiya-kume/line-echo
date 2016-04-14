@@ -13,7 +13,16 @@ class App < Sinatra::Base
           :to => [msg['content']['from']],
           :toChannel => 1383378250, # Fixed  value
           :eventType => "138311608800106203", # Fixed value
-          content: msg['content']
+          #オウム返しする場合
+          #content: msg['content']
+
+
+          content => {
+              :contentType => 1,
+              :toType => 1,
+              :text => msg['content'].to_json
+          }
+
           #content => {
           #    :contentType => 1,
           #    :toType => 1,
