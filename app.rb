@@ -14,19 +14,21 @@ class App < Sinatra::Base
           :toChannel => 1383378250, # Fixed  value
           :eventType => "138311608800106203", # Fixed value
           #オウム返しする場合
-          #content: msg['content']
 
-          :content => {
-              :location => null,
-              :id => "325708",
-              :contentType => 1,
-              :from => "uff2aec188e58752ee1fb0f9507c6529a",
-              :createdTime => 1332394961610,
-              :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
-              :toType => 1,
-              :contentMetadata => null,
-              :text => "Hello, BOT API Server!"
-          }
+          # msg['content'].text = "Hello World"
+          :content => msg['content']
+
+          # :content => {
+          #     :location => null,
+          #     :id => "325708",
+          #     :contentType => 1,
+          #     :from => "uff2aec188e58752ee1fb0f9507c6529a",
+          #     :createdTime => 1332394961610,
+          #     :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
+          #     :toType => 1,
+          #     :contentMetadata => null,
+          #     :text => "Hello, BOT API Server!"
+          # }
 
           #content => {
           #    :contentType => 1,
