@@ -30,7 +30,11 @@ class App < Sinatra::Base
           #     :text => "Hello, BOT API Server!"
           # }
 
-          content: {contentType: 1, toType: 1, text: "Hello"}
+          content: {
+              :contentType => 1,
+              :toType => 1,
+              :text => [msg['content']['from']]
+          }
       }
 
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
