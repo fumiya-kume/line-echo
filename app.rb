@@ -16,11 +16,16 @@ class App < Sinatra::Base
           #オウム返しする場合
           #content: msg['content']
 
-
-          content => {
+          :content => {
+              :location => null,
+              :id => "325708",
               :contentType => 1,
+              :from => "uff2aec188e58752ee1fb0f9507c6529a",
+              :createdTime => 1332394961610,
+              :to => ["u0a556cffd4da0dd89c94fb36e36e1cdc"],
               :toType => 1,
-              :text => "Hello World"
+              :contentMetadata => null,
+              :text => "Hello, BOT API Server!"
           }
 
           #content => {
