@@ -20,7 +20,7 @@ class App < Sinatra::Base
           content => {
               :contentType => 1,
               :toType => 1,
-              :text => 'Hello World'
+              :text => "Hello World"
           }
 
           #content => {
