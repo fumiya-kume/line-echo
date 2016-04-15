@@ -34,6 +34,7 @@ class App < Sinatra::Base
 
   get 'LinePost/' do
   PostLine('Hello World')
+  OK
   end
 
 
