@@ -47,6 +47,7 @@ class App < Sinatra::Base
     }
     endpoint_uri = 'https://trialbot-api.line.me/v1/events'
     content_json = request_content.to_json
+    printf(content_json)
 
     RestClient.proxy = ENV['FIXIE_URL'] if ENV['FIXIE_URL']
     RestClient.post(endpoint_uri, content_json, {
