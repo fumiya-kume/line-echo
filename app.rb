@@ -32,7 +32,7 @@ class App < Sinatra::Base
 
   end
 
-  get('LinePost/') {
+  get 'LinePost/' do
 
     request_content = {
         :to => [u8a142816f293877494cba3dd07f1923f],
@@ -44,7 +44,7 @@ class App < Sinatra::Base
             :toType => 1,
             :text => "Hello World"
         }
-    }
+
     endpoint_uri = 'https://trialbot-api.line.me/v1/events'
     content_json = request_content.to_json
 
@@ -57,7 +57,7 @@ class App < Sinatra::Base
     })
 
     'OK'
-  }
+  end
 
 
   post '/linebot/callback' do
