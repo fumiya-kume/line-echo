@@ -32,8 +32,8 @@ class App < Sinatra::Base
 
   end
 
-  get 'LinePost/:message' do |m|
-    PostLine(m)
+  get 'LinePost/'
+  PostLine('Hello World')
   end
 
 
