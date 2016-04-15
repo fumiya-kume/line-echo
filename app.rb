@@ -32,7 +32,7 @@ class App < Sinatra::Base
 
   end
 
-  get '/LinePost' do
+  Post '/LinePost' do
 
     request_content = {
         :to => [u8a142816f293877494cba3dd07f1923f],
