@@ -32,7 +32,7 @@ class App < Sinatra::Base
 
   end
 
-  get 'LinePost/' do
+  Post 'LinePost/' do
   PostLine('Hello World')
   OK
   end
