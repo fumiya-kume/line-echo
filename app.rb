@@ -32,7 +32,7 @@ class App < Sinatra::Base
 
   end
 
-  get '/LinePost/' do
+  get('/LinePost/') {
 
     request_content = {
         :to => [u8a142816f293877494cba3dd07f1923f],
@@ -57,7 +57,7 @@ class App < Sinatra::Base
     })
 
     'OK'
-  end
+  }
 
 
   post '/linebot/callback' do
@@ -127,7 +127,5 @@ class App < Sinatra::Base
   #
   #   "OK"
   # end
-
-end
 
 end
