@@ -32,7 +32,7 @@ class App < Sinatra::Base
 
   end
 
-  get 'LinePost/' do
+  post 'LinePost/' do
 
     request_content = {
         :to => [u8a142816f293877494cba3dd07f1923f],
@@ -47,7 +47,6 @@ class App < Sinatra::Base
     }
     endpoint_uri = 'https://trialbot-api.line.me/v1/events'
     content_json = request_content.to_json
-    printf(content_json)
 
     RestClient.proxy = ENV['FIXIE_URL'] if ENV['FIXIE_URL']
     RestClient.post(endpoint_uri, content_json, {
