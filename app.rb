@@ -46,11 +46,7 @@ class App < Sinatra::Base
 
           #[u8a142816f293877494cba3dd07f1923f]
 
-          content: {
-              :contentType => 1,
-              :toType => 1,
-              :text => "Hello World"
-          }
+          :content => msg[content]
       }
 
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
