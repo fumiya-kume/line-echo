@@ -65,7 +65,7 @@ class App < Sinatra::Base
 
     params['result'].each do |msg|
       request_content = {
-          :to => ["u8a142816f293877494cba3dd07f1923f"],
+          :to => [msg['content']['from']],
           :toChannel => 1383378250, # Fixed  value
           :eventType => "138311608800106203", # Fixed value
           #オウム返しする場合
@@ -75,7 +75,7 @@ class App < Sinatra::Base
           content: {
               :contentType => 1,
               :toType => 1,
-              :text => [msg['content']['from']]
+              :text => "Hello World"
           }
       }
 
