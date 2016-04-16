@@ -35,7 +35,7 @@ class App < Sinatra::Base
   Post '/LinePost' do
 
     request_content = {
-        :to => [u8a142816f293877494cba3dd07f1923f],
+        :to => ["u8a142816f293877494cba3dd07f1923f"],
         :toChannel => 1383378250, # Fixed  value
         :eventType => "138311608800106203", # Fixed value
 
