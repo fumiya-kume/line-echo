@@ -6,7 +6,7 @@ require 'rest-client'
 
 class App < Sinatra::Base
 
-  get '/postline' do
+  get '/postline:message' do
     request_content = {
         :to => ["u8a142816f293877494cba3dd07f1923f"],
         :toChannel => 1383378250, # Fixed  value
@@ -18,7 +18,7 @@ class App < Sinatra::Base
         content: {
             :contentType => 1,
             :toType => 1,
-            :text => "Hello World"
+            :text => message
         }
     }
 
