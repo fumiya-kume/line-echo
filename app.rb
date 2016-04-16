@@ -18,7 +18,7 @@ class App < Sinatra::Base
         content: {
             :contentType => 1,
             :toType => 1,
-            :text => message
+            :text => params[:message]
         }
     }
 
